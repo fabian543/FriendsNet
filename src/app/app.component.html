@@ -1,0 +1,33 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+  
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      
+    
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <a class="navbar-brand" routerLink="" routerLinkActive="active-link">Mis historietas</a>
+          <a class="navbar-brand" routerLink="miscosas" routerLinkActive="active-link">Mis cosas</a>
+          <a class="navbar-brand" routerLink="miscolegas" routerLinkActive="active-link">Mis colegas</a>
+          <a class="navbar-brand" routerLink="" routerLinkActive="active-link">Eventos</a>
+        
+      </div>
+    </nav>
+
+    <div class="container-profile">
+        <div class="image-profile">
+            <img src="" alt="">
+        </div>
+        <div class="info-profile">
+            <p class="name">{{person?.name}}</p>
+            <p class="surname">{{person?.last_name}}</p>
+        </div>
+    </div>
+    <router-outlet></router-outlet>
+
+
+</div>
+
+
+
+

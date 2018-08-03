@@ -1,0 +1,36 @@
+
+  <!-- -->
+  <div class="container">
+    <h3 class=" text-center">Messaging</h3>
+    <div class="messaging">
+          <div class="inbox_msg">
+            <div class="">
+              <div class="headind_srch">
+                <div class="recent_heading">
+                  <h4>Recent Post</h4>
+                </div>
+                <div class="srch_bar">
+                  
+                </div>
+              </div>
+              <div class="inbox_chat">
+                <!-- AQUI LISTAMOS LOS POST NgFor-->
+
+                <div *ngFor=" let p of post" class="chat_list active_chat">
+                  <div class="chat_people">
+                    <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                    <div class="chat_ib">
+                      <h5>{{p.person?.name}} <span class="chat_date"> {{p.posted | date:'medium'}}</span></h5>
+                      <p> {{p.text}}</p>
+                    </div>
+                  </div>
+                </div>
+              
+              </div>
+            </div>
+            <div class="">
+             <!-- AUI IRAN LOS AMIGOS-->
+             
+            </div>
+          </div>
+                    

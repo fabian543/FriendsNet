@@ -1,0 +1,7 @@
+<form (submit)="doPost()" >
+    <fieldset>
+      <legend>Postea Algo {{person?.name}} {{person?.last_name}}</legend>
+      <textarea name="post" [(ngModel)]="valueInput"></textarea>
+      <button type="submit">Publicar</button>
+    </fieldset>
+  </form>

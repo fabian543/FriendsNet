@@ -1,0 +1,55 @@
+<span *ngIf="addNoamigos()"></span>
+
+<div class="container">
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Mis Datos</h1>
+      <p class="lead">Name: {{person?.name}}</p>
+      <p>Apellido: {{person?.last_name}}</p>
+      <p>Ciudad: {{person?.city}}</p>
+
+      <p>Fecha Nacimiento: {{person?.birth}}</p>
+    </div>
+</div>
+</div>
+
+
+<!--<button type="button" (click)="addNoamigos()"></button> -->
+
+
+  <div class="container" >
+      <div class="row">
+          <div class="col-md-6">
+              <app-post></app-post> </div>
+          <div class="panel panel-default user_panel">
+              <div class="panel-heading">
+                  <h3 class="panel-title">Users</h3>
+              </div>
+              <div class="panel-body">
+                  <div class="table-container">
+                      <table class="table-users table" border="0">
+                          <tbody >
+                              <tr *ngFor="let p of totalyamigos">
+                                  <td width="10" align="center">
+                                      <i class="fa fa-2x fa-user fw"></i>
+                                  </td>
+                                  <td>
+                                      {{p.persona1.name}}&nbsp;{{p.persona1.last_name}}
+                                      <br>
+                                      <span *ngIf="p.esAmigo===false">
+                                        <button type="button" (click)="addFriend(p.persona1)" ><i class="fa fa-plus-circle"></i></button>
+                                      
+                                      </span>
+
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+
